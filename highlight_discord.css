@@ -1,0 +1,68 @@
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    background: #f0f0f0;
+    line-height: 1.1;
+}
+
+.theme-light .hljs-doctag,.theme-light .hljs-keyword,.theme-light .hljs-meta .hljs-keyword,.theme-light .hljs-template-tag,.theme-light .hljs-template-variable,.theme-light .hljs-type,.theme-light .hljs-variable.language_ {
+    color: #d73a49
+}
+
+.theme-light .hljs-title,.theme-light .hljs-title.class_,.theme-light .hljs-title.class_.inherited__,.theme-light .hljs-title.function_ {
+    color: #6f42c1
+}
+
+.theme-light .hljs-attr,.theme-light .hljs-attribute,.theme-light .hljs-literal,.theme-light .hljs-meta,.theme-light .hljs-number,.theme-light .hljs-operator,.theme-light .hljs-selector-attr,.theme-light .hljs-selector-class,.theme-light .hljs-selector-id,.theme-light .hljs-variable {
+    color: #005cc5
+}
+
+.theme-light .hljs-meta .hljs-string,.theme-light .hljs-regexp,.theme-light .hljs-string {
+    color: #032f62
+}
+
+.theme-light .hljs-built_in,.theme-light .hljs-symbol {
+    color: #e36209
+}
+
+.theme-light .hljs-code,.theme-light .hljs-comment,.theme-light .hljs-formula {
+    color: #6a737d
+}
+
+.theme-light .hljs-name,.theme-light .hljs-quote,.theme-light .hljs-selector-pseudo,.theme-light .hljs-selector-tag {
+    color: #22863a
+}
+
+.theme-light .hljs-subst {
+    color: #24292e
+}
+
+.theme-light .hljs-section {
+    color: #005cc5;
+    font-weight: 700
+}
+
+.theme-light .hljs-bullet {
+    color: #735c0f
+}
+
+.theme-light .hljs-emphasis {
+    color: #24292e;
+    font-style: italic
+}
+
+.theme-light .hljs-strong {
+    color: #24292e;
+    font-weight: 700
+}
+
+.theme-light .hljs-addition {
+    color: #22863a;
+    background-color: #f0fff4
+}
+
+.theme-light .hljs-deletion {
+    color: #b31d28;
+    background-color: #ffeef0
+}
