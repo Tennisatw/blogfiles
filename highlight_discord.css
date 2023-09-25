@@ -4,6 +4,7 @@
     padding: 1em;
     background: #f0f0f0;
     line-height: 1.1;
+    font-family: Consolas;
 }
 
 .hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_ {
@@ -19,7 +20,7 @@
 }
 
 .hljs-meta .hljs-string,.hljs-regexp,.hljs-string {
-    color: #032f62
+    color: #059435
 }
 
 .hljs-built_in,.hljs-symbol {
