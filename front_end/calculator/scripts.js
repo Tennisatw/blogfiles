@@ -1,7 +1,4 @@
 var expression = ""
-var calculator = document.createElement("div");
-calculator.id = "calculator";
-document.body.appendChild(calculator);
 
 var expressionValue = document.createElement("div");
 expressionValue.id = "expressionValue";
