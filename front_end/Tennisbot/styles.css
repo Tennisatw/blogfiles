@@ -1,0 +1,9 @@
+.text_box {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    font-size: 20px;
+    text-align: right;
+    color: black;
+}
