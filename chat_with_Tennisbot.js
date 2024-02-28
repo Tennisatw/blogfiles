@@ -107,7 +107,7 @@ if (document.title == "Tennisatw的博客 - Blog of Tennisatw") {
   let input = document.createElement("textarea");
   input.id = "input_tennisbot";
   input.className = "wl-editor";
-  input.placeholder = "与Tennisbot讨论有关本文的话题，或者闲聊 \n Discuss topics related to this article with Tennisbot, or just have a casual chat.";
+  input.placeholder = "与Tennisbot聊天 Chat with Tennisbot";
   tennisbotInputContainer.appendChild(input);
 
   let sendContainer = document.createElement("div");
