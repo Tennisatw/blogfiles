@@ -68,7 +68,7 @@ function post(conversation, question) {
       generated_text = data["choices"][0]["message"]["content"];
       conversation.push({ role: "assistant", content: generated_text });
       let i = generated_text;
-      void o(i, 7e3, 8);
+      void o(i, 7e3, 9);
     })
     .catch((error) => console.error("Error:", error));
 }
@@ -124,6 +124,6 @@ document.getElementById("send_tennisbot").addEventListener("click", function () 
   let question = document.getElementById("input_tennisbot").value;
   document.getElementById("input_tennisbot").value = "";
   let i = "User: " + question + "\n🎾思考中";
-  void o(i, 1e3, 8);
+  void o(i, 7e3, 8);
   post(conversation, question);
 });
