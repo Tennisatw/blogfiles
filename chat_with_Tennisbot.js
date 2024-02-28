@@ -67,9 +67,33 @@ function post(conversation, question) {
     .then((data) => {
       generated_text = data["choices"][0]["message"]["content"];
       conversation.push({ role: "assistant", content: generated_text });
-      document.getElementById("waifu-tips").value = generated_text;
+      let i = generated_text;
+      void o(i, 7e3, 8);
     })
     .catch((error) => console.error("Error:", error));
+}
+
+function e(e) {
+  return Array.isArray(e) ? e[Math.floor(Math.random() * e.length)] : e;
+}
+let t;
+function o(o, s, n) {
+  if (
+    !o ||
+    (sessionStorage.getItem("waifu-text") &&
+      sessionStorage.getItem("waifu-text") > n)
+  )
+    return;
+  t && (clearTimeout(t), (t = null)),
+    (o = e(o)),
+    sessionStorage.setItem("waifu-text", n);
+  const i = document.getElementById("waifu-tips");
+  (i.innerHTML = o),
+    i.classList.add("waifu-tips-active"),
+    (t = setTimeout(() => {
+      sessionStorage.removeItem("waifu-text"),
+        i.classList.remove("waifu-tips-active");
+    }, s));
 }
 
 let tennisbotInputContainer = document.createElement("div");
@@ -99,6 +123,7 @@ sendContainer.appendChild(send);
 document.getElementById("input_tennisbot").addEventListener("click", function () {
   let question = document.getElementById("input_tennisbot").value;
   document.getElementById("input_tennisbot").value = "";
-  document.getElementById("waifu-tips").value = "User: " + question + "\n🎾思考中";
+  let i = "User: " + question + "\n🎾思考中";
+  void o(i, 1e3, 8);
   post(conversation, question);
 });
