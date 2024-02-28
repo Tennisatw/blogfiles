@@ -73,26 +73,32 @@ function post(conversation, question) {
 }
 
 let tennisbotInputContainer = document.createElement("div");
-tennisbotInputContainer.id = "tennisbot_input_container";
+tennisbotInputContainer.id = "input_tennisbot_container";
 tennisbotInputContainer.className = "wl-panel";
 footer = document.getElementsByClassName("post-footer")[0];
 footer.appendChild(tennisbotInputContainer);
 
 let input = document.createElement("textarea");
-input.id = "tennisbot_input";
+input.id = "input_tennisbot";
 input.className = "wl-editor";
 input.placeholder = "与Tennisbot聊天";
 tennisbotInputContainer.appendChild(input);
 
+let sendContainer = document.createElement("div");
+sendContainer.id = "send_tennisbot_container";
+sendContainer.className = "wl-footer";
+sendContainer.style = "justify-content: flex-end;";
+tennisbotInputContainer.appendChild(sendContainer);
+
 let send = document.createElement("button");
-send.id = "tennisbot_send";
+send.id = "send_tennisbot";
 send.className = "primary wl-btn";
 send.innerHTML = "发送 Send";
-tennisbotInputContainer.appendChild(send);
+sendContainer.appendChild(send);
 
-document.getElementById("tennisbot_send").addEventListener("click", function () {
-  let question = document.getElementById("tennisbot_input").value;
-  document.getElementById("tennisbot_input").value = "";
+document.getElementById("input_tennisbot").addEventListener("click", function () {
+  let question = document.getElementById("input_tennisbot").value;
+  document.getElementById("input_tennisbot").value = "";
   document.getElementById("waifu-tips").value = "User: " + question + "\n🎾思考中";
   post(conversation, question);
 });
