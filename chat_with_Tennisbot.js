@@ -90,8 +90,8 @@ send.className = "primary wl-btn";
 send.innerHTML = "发送 Send";
 tennisbotInputContainer.appendChild(send);
 
-document.getElementById("send").addEventListener("click", function () {
-  let question = document.getElementById("input").value;
+document.getElementById("tennisbot_send").addEventListener("click", function () {
+  let question = document.getElementById("tennisbot_input").value;
   document.getElementById("tennisbot_input").value = "";
   document.getElementById("waifu-tips").value = "User: " + question + "\n🎾思考中";
   post(conversation, question);
