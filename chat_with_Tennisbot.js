@@ -75,8 +75,8 @@ function post(conversation, question) {
 let tennisbotInputContainer = document.createElement("div");
 tennisbotInputContainer.id = "tennisbot_input_container";
 tennisbotInputContainer.className = "wl-panel";
-comment = document.getElementById("comments");
-comment.appendChild(tennisbotInputContainer);
+footer = document.getElementsByClassName("post-footer")[0];
+footer.appendChild(tennisbotInputContainer);
 
 let input = document.createElement("textarea");
 input.id = "tennisbot_input";
