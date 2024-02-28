@@ -120,7 +120,7 @@ send.className = "primary wl-btn";
 send.innerHTML = "发送 Send";
 sendContainer.appendChild(send);
 
-document.getElementById("input_tennisbot").addEventListener("click", function () {
+document.getElementById("send_tennisbot").addEventListener("click", function () {
   let question = document.getElementById("input_tennisbot").value;
   document.getElementById("input_tennisbot").value = "";
   let i = "User: " + question + "\n🎾思考中";
