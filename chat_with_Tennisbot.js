@@ -1,4 +1,4 @@
-if (document.title == "Tennisatw的博客 - Blog of Tennisatw") {
+if ((document.title == "Tennisatw的博客 - Blog of Tennisatw") || (document.title == "化学自学指南")) {
 } else {
 
   conversation = [];
@@ -25,7 +25,12 @@ if (document.title == "Tennisatw的博客 - Blog of Tennisatw") {
       "c2stdGdWQjRrcTNuTWZLVHJ1alJqcHpUM0JsYmtGSkt3UXZxZkRFTnlaRExFTk5VSDVxMDAwMDAwMDAwMA==";
     let token = atob(encoded).slice(0, 51);
     let max_tokens = 300;
-    let model = "gpt-4-turbo-preview";
+    if (question[0]=="🎾") {
+      question = question.slice(1);
+      var model = "gpt-4-turbo-preview";
+    } else {
+      var model = "gpt-3.5-turbo";
+    }
     let temperature = 1;
     let logit_bias = {
       20551: +2,
