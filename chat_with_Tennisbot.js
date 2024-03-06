@@ -22,15 +22,9 @@ if ((document.title == "Tennisatw的博客 - Blog of Tennisatw") || (document.ti
     let system_message = getSystemMessage();
     let document_message = getDocumentMessage();
     let encoded =
-      "c2stdGdWQjRrcTNuTWZLVHJ1alJqcHpUM0JsYmtGSkt3UXZxZkRFTnlaRExFTk5VSDVxMDAwMDAwMDAwMA==";
-    let token = atob(encoded).slice(0, 51);
+      "c2stbGx3TzQ2dVpwQzFPb2JRWG5DdHVUM0JsYmtGSmM5Vnp6NXZEM0tKVTVBU2pwUTRMMDAwMDAwMDAwMA==";
     let max_tokens = 300;
-    if (question[0]=="🎾") {
-      question = question.slice(1);
-      var model = "gpt-4-turbo-preview";
-    } else {
-      var model = "gpt-3.5-turbo";
-    }
+    let model = "gpt-3.5-turbo";
     let temperature = 1;
     let logit_bias = {
       20551: +2,
@@ -63,7 +57,7 @@ if ((document.title == "Tennisatw的博客 - Blog of Tennisatw") || (document.ti
     fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + atob(encoded).slice(0, 51),
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
@@ -77,7 +71,10 @@ if ((document.title == "Tennisatw的博客 - Blog of Tennisatw") || (document.ti
         let i = generated_text;
         void o(i, 10e3, 9);
       })
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => {
+      console.error("Error:", error);
+      void o("🎾出了一个错误",3e3, 9);
+  })
   }
 
   function e(e) {
@@ -128,7 +125,10 @@ if ((document.title == "Tennisatw的博客 - Blog of Tennisatw") || (document.ti
   sendContainer.appendChild(send);
 
   document.getElementById("send_tennisbot").addEventListener("click", function () {
-    let question = document.getElementById("input_tennisbot").value;
+    var question = document.getElementById("input_tennisbot").value;
+    if (question == "") {
+      return;
+    }
     document.getElementById("input_tennisbot").value = "";
     let i = question + "<br><br>🎾思考中";
     void o(i, 7e3, 8);
