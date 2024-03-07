@@ -38,16 +38,16 @@ if ((document.title == "Tennisatw的博客 - Blog of Tennisatw") || (document.ti
       15722: -5,
       231: -3,
     };
-
-    conversation.push({ role: "system", content: system_message });
-    conversation.push({
+    conversation.push({ role: "user", content: question });
+    let messages = [];
+    messages.push({ role: "system", content: system_message });
+    messages.push({
       role: "system",
       name: "website_content",
       content: document_message,
     });
-    conversation.push({ role: "user", content: question });
     let data = {
-      messages: conversation,
+      messages: messages.concat(conversation),
       max_tokens: max_tokens,
       temperature: temperature,
       model: model,
